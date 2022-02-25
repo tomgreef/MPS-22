@@ -10,12 +10,14 @@ import static org.junit.jupiter.api.Assertions.*;
         factorial 1 -> 1
         factorial 2 -> 2
         factorial 3 -> 4
+        factorial 720 -> 6
+        factorial negative number
  */
 
 public class FactorialTest {
     @Test
     public void testComputeReturnOneIfTheNumberIsZero(){
-        Factorial factorial = new Factorial();
+        var factorial = new Factorial();
         int expectedValue = 1;
         int obtainedValue = factorial.compute(0);
 
@@ -24,7 +26,7 @@ public class FactorialTest {
 
     @Test
     public void testComputeReturnOneIfTheNumberIsOne(){
-        Factorial factorial = new Factorial();
+        var factorial = new Factorial();
         int expectedValue = 1;
         int obtainedValue = factorial.compute(1);
 
@@ -33,10 +35,34 @@ public class FactorialTest {
 
     @Test
     public void testComputeReturnTwoIfTheNumberIsTwo(){
-        Factorial factorial = new Factorial();
+        var factorial = new Factorial();
         int expectedValue = 2;
         int obtainedValue = factorial.compute(2);
 
         assertEquals(expectedValue, obtainedValue);
+    }
+
+    @Test
+    public void testComputeReturnSixIfTheNumberIsThree(){
+        var factorial = new Factorial();
+        int expectedValue = 6;
+        int obtainedValue = factorial.compute(3);
+
+        assertEquals(expectedValue, obtainedValue);
+    }
+
+    @Test
+    public void testComputeReturn720IfTheNumberIs6(){
+        var factorial = new Factorial();
+        int expectedValue = 6;
+        int obtainedValue = factorial.compute(3);
+
+        assertEquals(expectedValue, obtainedValue);
+    }
+
+    @Test
+    public void testComputeOfANegativeNumberRaiseAnException(){
+        var factorial = new Factorial();
+        assertThrows(RuntimeException.class, () -> factorial.compute(-1));
     }
 }
