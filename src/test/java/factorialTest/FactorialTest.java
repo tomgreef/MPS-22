@@ -25,7 +25,7 @@ public class FactorialTest {
     }
 
     @AfterEach
-    public void close (){
+    public void finish (){
         factorial = null;
     }
 
