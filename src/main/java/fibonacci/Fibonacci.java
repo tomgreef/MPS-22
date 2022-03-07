@@ -1,12 +1,12 @@
-package factorial;
+package fibonacci;
 
 /**
  * Class providing a method that computes the factorial of an integer number
  *
- * @author Tom vG
+ * @author Tom van Greevenbroek
  **/
 
-public class Factorial {
+public class Fibonacci {
 
     public int compute(int value) {
         int result = 1;
@@ -18,7 +18,6 @@ public class Factorial {
             result *= value;
             value--;
         }
-        // result =  value * compute(value - 1);
 
         return result;
     }
