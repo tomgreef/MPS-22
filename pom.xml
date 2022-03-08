@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.tomvg</groupId>
-    <artifactId>PrimerPrueba</artifactId>
+    <artifactId>Fibonacci</artifactId>
     <version>release\0.0.1</version>
 
     <properties>
